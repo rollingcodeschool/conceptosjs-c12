@@ -32,7 +32,5 @@ document.writeln("<br>El link de live server es: " + url);
 // const numero1, numero2, resultado
 const numero1 = parseInt(prompt('Ingrese un número')), 
   numero2 =  parseInt(prompt('Ingrese un segundo número'));
-const resultado = numero1 + numero2;
-
-document.writeln("<br>La suma de los dos numeros ingresados es:" + resultado);
+document.writeln("<br>La suma de los dos numeros ingresados es:" + (numero1 + numero2));
 // document.writeln(resultado)
