@@ -6,7 +6,7 @@ de multiples lineas */
 
 console.log("Mensaje de prueba");
 
-document.writeln("<p>Feli cumple vale 🎈 </p>");
+document.writeln("<p>Feliz cumple vale 🎈 </p>");
 document.writeln("Hola mundo");
 
 // variables (let - const - var)
