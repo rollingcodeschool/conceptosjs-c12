@@ -11,13 +11,18 @@ console.log(nota);
 console.log(isNaN(nota));
 // la nota es numero?
 //  !isNan(1) = true
+
 if (!isNaN(nota)) {
   if (nota < 0 || nota > 100) {
     document.writeln("Nota invalida");
   } else if (nota >= 0 && nota <= 59) {
-    document.writeln("Desaprobado");
+    document.writeln("Desaprobado 😮");
   } else if (nota >= 60 && nota <= 69) {
-    document.writeln("Aprobado con lo justo");
+    document.writeln("Aprobado con lo justo 😋");
+  } else if (nota >= 70 && nota <= 79) {
+    document.writeln("Aprobado con buen desempeño 😎");
+  } else {
+    document.writeln("Excelente desempeño 😁");
   }
 } else {
   //si me devolvio NaN
