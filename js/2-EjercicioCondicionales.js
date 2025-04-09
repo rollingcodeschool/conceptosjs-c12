@@ -6,3 +6,20 @@ Si la nota es mayor o igual a 70, mostrar: "Aprobado con buen desempeño".
 Si no, mostrar: "Aprobado con lo justo".
 Si la nota está entre 80 y 100, mostrar: "Excelente desempeño".*/
 
+const nota = parseInt(prompt("Ingrese una nota de 0 al 100"));
+console.log(nota);
+console.log(isNaN(nota));
+// la nota es numero?
+//  !isNan(1) = true
+if (!isNaN(nota)) {
+  if (nota < 0 || nota > 100) {
+    document.writeln("Nota invalida");
+  } else if (nota >= 0 && nota <= 59) {
+    document.writeln("Desaprobado");
+  } else if (nota >= 60 && nota <= 69) {
+    document.writeln("Aprobado con lo justo");
+  }
+} else {
+  //si me devolvio NaN
+  document.writeln("Operacion Invalida");
+}
