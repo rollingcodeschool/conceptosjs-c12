@@ -3,10 +3,12 @@ Nota: Tener en cuenta la función length y substring o charAt (developer mozilla
 
 //voy a restringir la cantidad de caracteres de la palabra que ingresa el usuario
 
-const frase = prompt('Ingresa una frase de hasta 5 caracteres');
+const frase = prompt('Ingresa una frase de hasta 5 caracteres').toLowerCase();
 //hola
 console.log(frase)
 console.log(frase.length)
+console.log(frase.toUpperCase())// transformar un string a mayuscula
+console.log(frase.toLowerCase())// transformar un string a minusculas
 console.log(frase.charAt(0))
 if(frase.length <=5){
     if( frase.charAt(0) === 'a' || frase.charAt(0) === 'e' || frase.charAt(0) === 'i' || frase.charAt(0) === 'o' || frase.charAt(0) === 'u'){
