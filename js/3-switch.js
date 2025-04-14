@@ -20,7 +20,7 @@ switch(opcion){
 */
 
 //declarar e inicializar variables
-const opcion = (
+const opcion = parseInt(
   prompt(
     "Selecione una opción: 1- consultar el saldo, 2- ingresa dinero, 3- extraer dinero"
   )
