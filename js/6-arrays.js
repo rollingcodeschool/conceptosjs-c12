@@ -66,3 +66,42 @@ frutas.splice(1, 1);
 // frutas.splice(3) //borra todos los elementos desde la posicion 3 en adelante
 mostrarFrutas('Eliminar un elemento en el medio del array')
 
+document.writeln('<h2>Metodos extras para trabar con arrays</h2>')
+//find()
+// frutas.push('🍤');
+
+const sandia = frutas.find((item)=> item === '🍉')
+const sandiaPosition = frutas.findIndex((item)=> item === '🍉')
+const camaron = frutas.find((item)=> item === '🍤')
+const camaronPosition = frutas.findIndex((item)=> item === '🍤')
+console.log(sandia)
+console.log(sandiaPosition)
+console.log(camaron)
+console.log(camaronPosition)
+
+document.writeln(`<p>Se encontro el elemento buscado: ${sandia}, en la posicion: ${sandiaPosition}</p>`)
+document.writeln(`<p>Se encontro el elemento buscado: ${camaron}, en la posicion: ${camaronPosition}</p>`)
+// falsy
+/*
+false
+''
+null
+undefined
+NaN
+-1
+*/
+
+if(camaron){
+  document.writeln(`<p>Se encontro el 
+    elemento buscado: ${camaron}, en la posicion: ${camaronPosition}</p>`)
+}else{
+  document.writeln(`<p>No se encontro el elemento buscado '🍤'</p>`)
+}
+
+//operador ternario  ? :
+// (condicion logica) ? 'texto' : 'otro texto'
+// document.writeln(`${(camaron) ? '<p>Se encontro el elemento buscado: '+camaron+', en la posicion:'+camaronPosition+'</p>': "<p>No se encontro el elemento buscado '🍤'</p>" }`)
+
+const respuesta = (camaron)? `<p>Se encontro el elemento buscado: ${camaron}, en la posicion: ${camaronPosition}</p>`:`<p>No se encontro el elemento buscado '🍤'</p>`
+
+document.writeln(respuesta)
