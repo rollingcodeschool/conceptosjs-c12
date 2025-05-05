@@ -31,7 +31,7 @@ set setMail(nuevoMail){
         <li>Apellido: ${this.apellido}</li>
         <li>Edad: ${this.edad}</li>
         <li>Genero: ${this.genero}</li>
-        <li>Email: ${this.#mail}</li>
+        <li>Email: ${this.getMail}</li>
         </ul>`)
   }
   
@@ -40,10 +40,11 @@ set setMail(nuevoMail){
 //herencia
 class Alumno extends Persona{
     // puedo agregar propiedades privadas
+    #asistencia
     constructor(nombreParam, edadParam, apellidoParam, generoParam, mailParam, nombreUsuarioParam,  cursoParam){
        //invocar al constructor de la clase padre
        super(nombreParam, edadParam,apellidoParam,generoParam,mailParam,nombreUsuarioParam);
-       this.asistencia = 0
+       this.#asistencia = 0
        this.curso = cursoParam
        this.presentacionPracticos = []
     }
@@ -51,14 +52,14 @@ class Alumno extends Persona{
 
     //polimorfismo
     mostrarDatos(){
-        document.writeln(`<ul>
+        document.writeln(`<ol>
             <li>Nombre: ${this.nombre}</li>
             <li>Apellido: ${this.apellido}</li>
             <li>Edad: ${this.edad}</li>
             <li>Genero: ${this.genero}</li>
             <li>Email: ${this.getMail}</li>
             <li>Curso: ${this.curso}</li>
-            </ul>`)
+            </ol>`)
       }
 }
 
