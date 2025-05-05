@@ -49,3 +49,62 @@ class Contacto{
     }
 }
 
+class Agenda{
+    #contactos;
+    #tamanio;
+    constructor(tamanio = 10){
+        this.#contactos = [];
+        this.#tamanio = tamanio
+    }
+
+    get getContactos(){
+        return this.#contactos
+    }
+    get getTamanio(){
+        return this.#tamanio
+    }
+    set setTamanio(nuevoTamanio){
+        this.#tamanio = nuevoTamanio;
+    }
+
+    aniadirContacto(contacto){
+        this.#contactos.push(contacto)
+        console.log('Agregar contacto a la agenda', this.getContactos)
+    }
+    
+}
+
+const capacidadAgenda = parseInt(prompt('Ingresa el tamaño de la agenda'))
+//crear agenda
+const agendaNueva = new Agenda(capacidadAgenda)
+
+console.log(agendaNueva)
+do{
+// mostrar el menu de opciones para el usuario
+const opcion = parseInt(prompt(`Selecciona una opción:
+    1- Añadir contacto,
+    2- Eliminar contacto,
+    3- Listar contactos`))
+
+switch(opcion){
+    case 1:
+        //pedir al usuario el nombre y telefono
+        const nombre = prompt('Ingresa el nombre del contacto')
+        const telefono = prompt('Ingresa el telefono del contacto')
+        //verificar si existe un contacto con el nombre ingresado por el usuario
+        // preguntar si existe el contacto, entonces no lo agrego, pero en caso que no exista el contacto entonces si
+        //crear el objeto
+        const nuevoContacto = new Contacto(nombre,telefono)
+        console.log(nuevoContacto)
+        //invocar el metodo añadirContacto de la agenda
+        agendaNueva.aniadirContacto(nuevoContacto)
+        console.log(agendaNueva)
+        break
+    case 2:
+        //pedir al usuario el nombre del contacto a eliminar
+        //invocar el metodo eliminar contacto de la agenda
+        break;
+    default:
+        console.log('Ingreso una opcion invalida')    
+}
+}while(confirm('¿Queres realizar otra operacion?'))
