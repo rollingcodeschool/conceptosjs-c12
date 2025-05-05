@@ -1,5 +1,16 @@
 // Crea un objeto libro que tenga propiedades título, autor, año y género. Luego, escribe una función que reciba un array de libros y un género y devuelva un array con los libros de ese género usando filter. Usa prompt para ingresar los datos de los libros y el género.
 
+//objeto libro, repetir
+
+//crear un objeto libro con las propiedades(título, autor, año y género)
+
+// crear una funcion que reciba de parametro array de libros y un genero
+
+// pedir al usuario que cargue los libros (bucle)
+
+// pedir al usuario el genero de los libros que quiere filtrar (usar filter)
+
+
 const libros = []
 
 function filtrarPorGenero(arrayLibros, genero){
